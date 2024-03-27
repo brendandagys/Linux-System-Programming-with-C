@@ -59,6 +59,8 @@ int main() {
     }
   }
 
+  fclose(fconfig);
+
   // All watches are in place; now just read and report events
   fout = fopen("monitor.out", "a");
 
@@ -77,4 +79,6 @@ int main() {
       fflush(fout);
     }
   }
+
+  fclose(fout);
 }
